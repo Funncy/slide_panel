@@ -3,6 +3,7 @@ description: left, right side slide panel
 version: 0.0.1
 author: funncy <gywns6222@gmail.com>
 homepage: https://funncy.github.io/
+repository: https://github.com/Funncy/slide_panel.git
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

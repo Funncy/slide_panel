@@ -1,14 +1,39 @@
 # slide_panel
+---
 
-A new Flutter package project.
+This is a slide panel that can be dragged from side to side.
 
-## Getting Started
+![이미지](https://Funncy.github.io/assets/img/custom_drawer/2020-07-15-SLIDE_PANEL.gif "SLIDE PANEL")
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Features
+---
++ Slide ends when main body is clicked.
++ Enable/Disable left-right slide panel
+
+
+## Usage
+---
+
+```dart
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Slide Panel"),
+        ),
+        body: SlidePanel(
+          slideHandlerWidth: 10, 
+          slidePanelHeight: 300,
+          slidePanelWidth: 280,
+          slideOffBodyTap: true, // If set to true, can close slide panel when tap the body widget.
+          leftPanelVisible: true, // If set to false, it is not visible.
+          rightPanelVisible: true, // If set to false, it is not visible.
+          appbarIsExist: true, //default ture
+          body: BodyConatiner() // User widget,
+          leftSlide: LeftSlideConatiner() // User widget,
+          rightSlide: RightSlideContainer() // User widget,
+        ),
+    );
+  }
+```
